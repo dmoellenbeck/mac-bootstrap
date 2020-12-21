@@ -65,7 +65,8 @@ gem_install_or_update() {
 
 if ! command -v brew >/dev/null; then
   laptop_echo "Installing Homebrew ..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	alias brew='arch -x86_64 brew'
 fi
 
 if brew list | grep -Fq brew-cask; then

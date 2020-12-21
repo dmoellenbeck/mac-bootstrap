@@ -26,9 +26,9 @@ osname=$(uname)
 export COMMANDLINE_TOOLS="/Library/Developer/CommandLineTools"
 export OLD_DOTFILES_BAK="${HOME}/old_dotfiles_bak"
 export DICTIONARY_DIR="${HOME}/Library/Spelling"
-export DOTFILES_REPO_URL="https://github.com/joshukraine/dotfiles.git"
+export DOTFILES_REPO_URL="https://github.com/dmoellenbeck/dotfiles.git"
 export DOTFILES_DIR="${HOME}/dotfiles"
-export BOOTSTRAP_REPO_URL="https://github.com/joshukraine/mac-bootstrap.git"
+export BOOTSTRAP_REPO_URL="https://github.com/dmoellenbeck/mac-bootstrap.git"
 export BOOTSTRAP_DIR="${HOME}/mac-bootstrap"
 
 PS3="> "
@@ -46,9 +46,9 @@ fi
 
 DEFAULT_BOOTSTRAP_VERSION="v5.1.5"
 DEFAULT_DOTFILES_BRANCH="master"
-DEFAULT_TIME_ZONE="Europe/Kiev"
-DEFAULT_NODEJS_VERSION="12.18.3"
-DEFAULT_RUBY_VERSION="2.7.1"
+DEFAULT_TIME_ZONE="Europe/Berlin"
+DEFAULT_NODEJS_VERSION="15.3.0"
+DEFAULT_RUBY_VERSION="2.7.2"
 
 
 ################################################################################
@@ -57,7 +57,7 @@ DEFAULT_RUBY_VERSION="2.7.1"
 
 if [ "$osname" == "Linux" ]; then
   bootstrap_echo "Oops, looks like you're on a Linux machine. Please have a look at
-  my Linux Bootstrap script: https://github.com/joshukraine/linux-bootstrap"
+  the Linux Bootstrap script: https://github.com/joshukraine/linux-bootstrap"
   exit 1
 elif [ "$osname" != "Darwin" ]; then
   bootstrap_echo "Oops, it looks like you're using a non-UNIX system. This script
@@ -100,7 +100,7 @@ echo "*************************************************************************"
 echo "*******                                                           *******"
 echo "*******                 Welcome to Mac Bootstrap!                 *******"
 echo "*******                                                           *******"
-echo "*******                   https://jsua.co/macos                   *******"
+echo "*******       https://github.com/dmoellenbeck/mac-bootstrap       *******"
 echo "*******                                                           *******"
 echo "*************************************************************************"
 echo
@@ -293,11 +293,11 @@ bootstrap_echo "Done!"
 # * http://extensions.services.openoffice.org/en/project/ukrainian-dictionary
 ################################################################################
 
-bootstrap_echo "Step 6: Installing Ukrainian language utilities..."
+#bootstrap_echo "Step 6: Installing Ukrainian language utilities..."
 
-cp "$BOOTSTRAP_DIR"/lib/{hyph_uk.dic,uk_UA.aff,uk_UA.dic} "$DICTIONARY_DIR"
+#cp "$BOOTSTRAP_DIR"/lib/{hyph_uk.dic,uk_UA.aff,uk_UA.dic} "$DICTIONARY_DIR"
 
-bootstrap_echo "Done!"
+#bootstrap_echo "Done!"
 
 
 ################################################################################

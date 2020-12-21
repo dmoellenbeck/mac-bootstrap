@@ -2,7 +2,7 @@
 
 ![mac-bootstrap screenshot][screenshot]
 
-This script will provision a new machine running a fresh install of [macOS Catalina (10.15)][catalina]. It installs and configures the software, dotfiles, and general preferences I use for web development — primarily [Rails][rails], [React][react], and [Vue][vue]. The command line environment is based on [Fish][fish] (or [Zsh][zsh]), [Neovim][neovim], and [Tmux][tmux] running in [iTerm2][iterm2] or [Alacritty][alacritty].
+This script will provision a new machine running a fresh install of [macOS Big Sur (11.1)][catalina]. It installs and configures the software, dotfiles, and general preferences I use for web development — primarily [Rails][rails], [React][react], and [Vue][vue]. The command line environment is based on [Fish][fish] (or [Zsh][zsh]), [Neovim][neovim], and [Tmux][tmux] running in [iTerm2][iterm2] or [Alacritty][alacritty].
 
 The [`bootstrap`][bootstrap] script is very specific to the Mac platform. Version 5.x has been successfully tested on the following versions of macOS:
 
@@ -15,13 +15,14 @@ Previous versions of Mac Bootstrap have been successfully tested on the followin
 * Sierra (10.12)
 * El Capitan (10.11)
 
-&#9657; **Looking for dotfiles only? Check out [My Dotfiles for macOS](http://jsua.co/dotfiles)**
+&#9657; **Looking for dotfiles only? Check out [My Dotfiles for macOS](https://github.com/dmoellenbeck/dotfiles)**
 
 ## Prerequisites
 
 1. Make sure your software is up to date:
 
         sudo softwareupdate -i -a --restart
+        softwareupdate --install-rosetta --agree-to-license
 
 1. Install Apple's command line tools:
 
@@ -34,12 +35,12 @@ Previous versions of Mac Bootstrap have been successfully tested on the followin
 To install with a one-liner, run this:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/joshukraine/mac-bootstrap/master/bootstrap && sh bootstrap 2>&1 | tee ~/bootstrap.log
+curl --remote-name https://raw.githubusercontent.com/moellinger/mac-bootstrap/master/bootstrap && sh bootstrap 2>&1 | tee ~/bootstrap.log
 ```
 
 Want to read through the script first?
 ```sh
-curl --remote-name https://raw.githubusercontent.com/joshukraine/mac-bootstrap/master/bootstrap
+curl --remote-name https://raw.githubusercontent.com/moellinger/mac-bootstrap/master/bootstrap
 less bootstrap
 sh bootstrap 2>&1 | tee ~/bootstrap.log
 ```
